@@ -172,12 +172,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>[toc]</p>
+        <ul>
+<li><a href="#pygame基础学习">pygame基础学习</a><pre><code>* [pygame最小开发框架](#pygame最小开发框架)
+* [引用部分](#引用部分)
+* [初始化](#初始化)
+* [处理](#处理)
+* [刷新](#刷新)</code></pre></li>
+</ul>
 <hr>
 <h1 id="pygame基础学习"><a href="#pygame基础学习" class="headerlink" title="pygame基础学习"></a>pygame基础学习</h1><h4 id="pygame最小开发框架"><a href="#pygame最小开发框架" class="headerlink" title="pygame最小开发框架"></a>pygame最小开发框架</h4><ul>
 <li>引用；初始；处理；刷新   </li>
 </ul>
-<p><img src="./images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200319152305.jpg" alt="最小框架"></p>
+<p><img src="https://github.com/cfxcheer/cfxcheer.github.io/blob/master/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200319152305.jpg?raw=true" alt="最小框架"></p>
 <ul>
 <li>最小游戏框架代码<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#hello wordld game</span></span><br><span class="line"><span class="keyword">import</span> pygame,sys</span><br><span class="line"></span><br><span class="line">pygame.inint()</span><br><span class="line">screen=pygame.display.set_mode((<span class="number">600</span>,<span class="number">400</span>))</span><br><span class="line">pygame.display.set_caption(<span class="string">"pygame游戏"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">	<span class="keyword">for</span> event <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">		<span class="keyword">if</span> event.type==pygame.QUIT:</span><br><span class="line">			sys.exit)(</span><br><span class="line"></span><br><span class="line">pyame.display.update()</span><br></pre></td></tr></table></figure>
 </li>
@@ -197,9 +203,24 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><ul>
 <li>初始化<br><code>pygame.init()</code>初始化，其实就是检查，电脑上一需要的硬件调用接口，基础功能是否有问题。如果有，他会在程序运行之前就反馈给你，方便你进行排查和规避。</li>
 </ul>
+<p> <img src="https://github.com/cfxcheer/cfxcheer.github.io/blob/master/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200319155448.jpg?raw=true" alt="初始化">  返回值（6，0），这是什么？<br>他的函数原型：init()-&gt;(numpass,numfail)。这个函数的返回值是一个元组，第一个数是成功的个数，第二个是失败的个数。<br>（6，0）说明初始化的时候导入了6个朋友pygame模块，失败为0系统正常。init的时候导入了6个常用的pygame模块。</p>
+<ul>
+<li><a href="https://blog.csdn.net/Lingdongtianxia/article/details/86612472" target="_blank" rel="noopener">display模块</a><br>  1.pygame.display：控制窗口和屏幕的pygame模块<br>  2.pygame.display.set_mode：初始化窗口或屏幕以进行显示。通常，游戏中需要加载大量的位图，pygame中自带了一些类和函数可以帮助我们轻松的搞位图加载和绘制。screen=pygame.display.set_mode()这个函数会返回一个Suface对象，它是位图的一种。Suface对象有一个名为bit的方法，它可以绘制位图.<br>  3.pygame.display.set_caption：设置当前窗口标题。</li>
+</ul>
+<hr>
+<h4 id="处理"><a href="#处理" class="headerlink" title="处理"></a>处理</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">	<span class="keyword">for</span> event <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">		<span class="keyword">if</span> event.type==pygame.QUIT:</span><br><span class="line">			sys.exit()</span><br></pre></td></tr></table></figure>
+<p>这是一个永真的无限循环，知道python运行时退出结束</p>
+<ul>
+<li>pygame.event  用于处理事件与事件队列的 Pygame 模块。</li>
+<li>Pygame 通过事件队列控制所有的事件消息。该模块中的程序帮用户管理事件队列。输入队列很大程度依赖于 pygame 的 display 模块。如果 display 没有被初始化，显示模式没有被设置，那么事件队列就还没有开始真正工作。</li>
+<li>pygame.event.get()函数——从队列中获取事件，并在队列中删除该事件</li>
+<li>event type——事件类型。从pygame事件列表中遍历事件，如果触发事件的类型为pygame的预定事件（如：QUIT），那么执行退出操作。<br>pygame.QUIT 是Pygame中定义的退出事件常量</li>
+</ul>
+<h4 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h4><p><code>pygame.display.update()</code>对显示窗口进行更新，默人窗口全部重绘。</p>
 
       
 
@@ -794,11 +815,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">python,小书匠</a>
+                <a href="javascript:void(0)" class="js-tag color4">更新说明,小书匠</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">更新说明,小书匠</a>
+                <a href="javascript:void(0)" class="js-tag color1">python,小书匠</a>
               </li>
             
             <div class="clearfix"></div>
