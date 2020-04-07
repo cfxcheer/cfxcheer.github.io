@@ -189,178 +189,9 @@
 <li><a href="#无人机安全">无人机安全</a></li>
 </ul>
 <hr>
-<h1 id="无线网络安全概述"><a href="#无线网络安全概述" class="headerlink" title="无线网络安全概述"></a>无线网络安全概述</h1><h4 id="无线网络与有线网络的主要区别"><a href="#无线网络与有线网络的主要区别" class="headerlink" title="无线网络与有线网络的主要区别"></a>无线网络与有线网络的主要区别</h4><p><img src="https://i.loli.net/2020/04/07/15L6oQNdi32EYbw.png" alt=""></p>
-<h6 id="网络连接的开放性"><a href="#网络连接的开放性" class="headerlink" title="网络连接的开放性"></a>网络连接的开放性</h6><ul>
-<li>有线网络的网络连接是相对固定的，具有确定的边界</li>
-<li>无限网络则没有一个明确的防御边界。无限网络的开放性带来了信息截、未授权使用服务、恶意注入信息等一系列信息安全问题</li>
-</ul>
-<h6 id="网络终端的移动性"><a href="#网络终端的移动性" class="headerlink" title="网络终端的移动性"></a>网络终端的移动性</h6><ul>
-<li>有线网络的用户终端与接入设备间通过线缆连接，终端不能大范围移动，对用户的管理比较容易<br>无线网络终端不仅可以在较大范围内移动，而且还可以跨区域漫游。</li>
-</ul>
-<h6 id="网络的拓扑结构"><a href="#网络的拓扑结构" class="headerlink" title="网络的拓扑结构"></a>网络的拓扑结构</h6><ul>
-<li>有线网络具有固定的拓扑结构，安全技术和方案容易部署</li>
-<li>在无线网络环境中：<br>  ①动态的、变化的拓扑结构缺乏集中管理机制，使得安全技术更加复杂；<br>  ②.许多决策是分散的，许多网络算法必须依赖大量节点的共同参与和协作来完成。</li>
-</ul>
-<h6 id="网络传输信号的稳定性"><a href="#网络传输信号的稳定性" class="headerlink" title="网络传输信号的稳定性"></a>网络传输信号的稳定性</h6><ul>
-<li>有线网络的传输环境是确定的，信号质量稳定。</li>
-<li>无线网络：信道特性随用户的移动而变化。对无线通信网络安全机制的鲁棒性（健壮性、高可靠性、高可用性）提出了更高的要求。</li>
-</ul>
-<h6 id="网络终端设备具有的特点"><a href="#网络终端设备具有的特点" class="headerlink" title="网络终端设备具有的特点"></a>网络终端设备具有的特点</h6><ul>
-<li>有线网络一般都不能被攻击者物理地接触到-</li>
-<li>无线网络可能被攻击者物理地接触到，因而可能存在假的访问点（AP）</li>
-<li>无线网络终端设备与有线网络的终端（如PC）相比，具有计算、通信、存储等资源受限的特点，以及对耗电量价格、体积等的要求</li>
-</ul>
-<h4 id="无限网络安全威胁"><a href="#无限网络安全威胁" class="headerlink" title="无限网络安全威胁"></a>无限网络安全威胁</h4><ul>
-<li>信息泄露</li>
-<li>完整性破坏</li>
-<li>非授权使用资源</li>
-<li>拒绝服务供给  </li>
-</ul>
-<p>可概括为：</p>
-<ul>
-<li>信息的窃听和截收</li>
-<li>数据的修改和替换、伪装、千扰和抑制</li>
-<li>无线AP欺诈、冒充和抵赖</li>
-<li>病毒 </li>
-</ul>
-<p><img src="https://i.loli.net/2020/04/07/uOXIhnkoPW6eqYF.png" alt=""></p>
-<hr>
-<h1 id="安卓与iOS安全"><a href="#安卓与iOS安全" class="headerlink" title="安卓与iOS安全"></a>安卓与iOS安全</h1><h6 id="认识Android平台"><a href="#认识Android平台" class="headerlink" title="认识Android平台"></a>认识Android平台</h6><p><img src="https://i.loli.net/2020/04/07/O3W6sxBetAZGFC4.png" alt=""><br>第一个商业版本于2008年发布</p>
-<h6 id="Android的特性"><a href="#Android的特性" class="headerlink" title="Android的特性"></a>Android的特性</h6><p>Android系统是基于 Linux的开源操作系统，无论是手机厂商还是个人开发者，都可以在 Android标准操作系统的基础上进行定制。</p>
-<ul>
-<li>Android平台系统架构层次：<ul>
-<li>应用层</li>
-<li>架构层</li>
-<li>运行层</li>
-<li>Linux内核层</li>
-</ul>
-</li>
-</ul>
-<h6 id="Android平合的安全问题"><a href="#Android平合的安全问题" class="headerlink" title="Android平合的安全问题"></a>Android平合的安全问题</h6><ul>
-<li>Android平台由于其开放的特性，相对其他移动终端平台存在更大的安全风险。</li>
-<li>Android系统自身拥有很多安全性检查和防御机制，为系统本身和其上各种应用的安全性保驾护航。</li>
-<li>但是在大多数情况下，重要数据衣然暴露在风险之中，主要的安全风佥威胁来源于ROOT和恶意软件。</li>
-</ul>
-<p>ROOT的危害：</p>
-<ul>
-<li>在 Linux系统中，ROOT是拥有最高权限的用户</li>
-<li>在 Android系统中，大多数厂商出于安全性考虑，会将系统开放给使用者的权限降低，某些功能和操作就公产生限制，而ROOT就是通过特殊的方式去除这种限制，让用户在使用手机的时候，能够获得ROOT权限</li>
-</ul>
-<p>Android手机ROOT之后的影响</p>
-<ul>
-<li>不能通过官方进行系统升级了，不过可以下载大量的第三方系统固件，让手机具有更好的机身扩展性</li>
-<li>设备上的病毒、木马有更多机会破坏设备或利用系统达成其非法目的</li>
-</ul>
-<h6 id="iOS平台及其安全"><a href="#iOS平台及其安全" class="headerlink" title="iOS平台及其安全"></a>iOS平台及其安全</h6><p><img src="https://i.loli.net/2020/04/07/BvU2wSC1rO8dieK.png" alt=""><br>iOS安全机制：</p>
-<ul>
-<li>权限分离</li>
-<li>强制代码签名</li>
-<li>地址空间随机分布</li>
-<li>沙盒</li>
-</ul>
-<hr>
-<h1 id="移动终端安全"><a href="#移动终端安全" class="headerlink" title="移动终端安全"></a>移动终端安全</h1><ul>
-<li>移动终端的概念：移动终端（或者叫移动通信终端）<br><img src="https://i.loli.net/2020/04/07/2TWKvDRh7kQNqYs.png" alt=""></li>
-<li>移动终端安全问题 <ul>
-<li>一方面，任何一种系统或平台都有其自身的脆弱性</li>
-<li>另一方面，移动终端上有大量应用，其中不少应用在上线之前由于各种原因并没有经过严格的安全性测试，导致存在严重的安全隐患   </li>
-</ul>
-</li>
-</ul>
-<p>可归纳为：</p>
-<ul>
-<li>敏感信息本地存储</li>
-<li>网络数据传输</li>
-<li>应用安全</li>
-<li>恶意软件</li>
-<li>系统安全问题</li>
-</ul>
-<hr>
-<h1 id="穿戴设备安全"><a href="#穿戴设备安全" class="headerlink" title="穿戴设备安全"></a>穿戴设备安全</h1><ul>
-<li>可穿戴设备：直接穿戴在使用者身上或是整合到使用者的衣服或配件上的设备。</li>
-<li>可穿戴设备的优点：<ul>
-<li>方便携带</li>
-<li>交互性好</li>
-<li>不分散使用者生活和工作的注意力</li>
-<li>随时随地感知环境和控制设备</li>
-</ul>
-</li>
-<li>可穿戴设备的两面性：<ul>
-<li>一方面，可穿戴设备成为工作和生活中与人联系更为密切的设备，掌握了更多使用者的信息，隐私问题和数据安全成为可穿戴设备安全的重中之重</li>
-<li>另一方面，可穿戴设备可以无缝地存在于生活和工作环境中，可让使用者从事诸如间谍等原来无法进行的非法活动，成为另类的社会安全问题</li>
-</ul>
-</li>
-</ul>
-<p>可穿戴设备是随着电子器件超微型化，以及多种前瞻的计算模式、微电子技术和通信技术的不断涌现应运而生的，是基于信息通信技术、电子芯片技术、软件技术和设计能力“以人为本”理念的产物。</p>
-<ul>
-<li><p>依据主体设备功能不同，可穿戴设备分为：</p>
-<ul>
-<li>可穿戴终端</li>
-<li>可穿戴外设</li>
-<li>区别：<br>可穿戴外设是指连在计算机主机以外的硬件设备，对数据和信息起着传输、转送和存储的作用，往往不具备处理能力<br>可穿戴终端首先是独立计算系统，可以独立处理数据和信息，完成指定任务</li>
-</ul>
-</li>
-<li><p>比较典型的可穿戴设备</p>
-<ul>
-<li>智能眼镜：<img src="https://i.loli.net/2020/04/07/pTvE8fbtRiUhlM5.png" alt=""><ul>
-<li>独立的操作系统</li>
-<li>安装软件、游戏等软件服务商提供的程序</li>
-<li>通过语音或动作操控完成添加日程、地图导航、与好友互动、拍摄照片和视频、与朋友展开视频通话等功能</li>
-<li>通过移动通讯网络来实现无线网络接入</li>
-</ul>
-</li>
-<li>智能手表 <img src="https://i.loli.net/2020/04/07/46HNYCzEnpMsXtd.png" alt=""></li>
-<li>智能鞋<img src="https://i.loli.net/2020/04/07/LGPv68TthcayeKk.png" alt=""></li>
-</ul>
-</li>
-<li><p>可穿戴设备出现安全隐患的根本原因：系统开放</p>
-</li>
-<li><p>设计和应用的目的：设计美观、使用灵活和用途多样</p>
-</li>
-<li><p>主要面临的安全风险：内部漏洞和外部攻击。</p>
-</li>
-<li><p>可穿戴设备：</p>
-<ul>
-<li>要满足机密性、完整性和可用性目标</li>
-<li>不能无限制违反社会安全进而获取他人数据和进行违法活动</li>
-</ul>
-</li>
-<li><p>应遵循的原则：</p>
-<ul>
-<li>整体性原则</li>
-<li>相对性原则</li>
-<li>目的性原则</li>
-<li>扩展性原则</li>
-<li>易用性原则</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="无人机安全"><a href="#无人机安全" class="headerlink" title="无人机安全"></a>无人机安全</h1><p><img src="https://i.loli.net/2020/04/07/RrhIV1AWeuqp6BH.png" alt=""><br><font color='blue'>美国《航空与太空技术周刊》刊登的分析报告称：</font>自2014年起，在未来10年，世界无人机市场规模将达到673亿美元<br> <font color='blue'>EVTank发布的《2015年度民用无人机市场研究报告》：</font>2014年全球民用无人机销量为37.8万架，到2020年全球无人机年销售量预计将达到433万架。我国目前已经有300~400家民用无人机企业<br><img src="https://i.loli.net/2020/04/07/qOr5aitySICDLTW.png" alt=""></p>
-<ul>
-<li>应用场景：<ul>
-<li>航拍</li>
-<li>监控</li>
-<li>农业植保</li>
-<li>空中无线网络</li>
-<li>数据采集</li>
-</ul>
-</li>
-<li>无人机的安全隐私问题：<br>  -无线信号劫持与千扰<ul>
-<li>GPS欺骗</li>
-<li>针对传感器网络的攻击</li>
-</ul>
-</li>
-<li>无人机面临的安全威胁：<ul>
-<li>2020年04月07日 16时19分17秒基于无人机自身的特点存在的安全问题。</li>
-<li>无人机与应用结合存在的安全问题。</li>
-<li>政策、法规监管盲区所存在的安全问题。</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p><img src="https://i.loli.net/2020/04/07/FVhm9gscHKJeDr4.png" alt="思维导图"></p>
-
+        
+          <a class="article-more-a" href="/2020/04/07/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/#more">more >></a>
+        
       
 
       
@@ -1076,15 +907,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">网络空间安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">python,小书匠</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">更新说明,小书匠</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">网络空间安全</a>
               </li>
             
             <div class="clearfix"></div>
